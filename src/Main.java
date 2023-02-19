@@ -2,7 +2,7 @@ import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.net.SocketException;
-import java.rmi.ServerError;
+
 
 public class Main {
     static String[] words = {"нуль", "один", "два", "три", "четыре", "пять", "шесть", "семь",
@@ -15,7 +15,7 @@ public class Main {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-        int num = -1;
+        int num;
         while (true) {
             try {
                 Socket client_socket = server_socket.accept();
